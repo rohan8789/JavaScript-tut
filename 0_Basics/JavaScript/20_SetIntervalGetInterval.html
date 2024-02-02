@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: auto;
+        }
+
+        #box {
+            width: 15vw;
+            height: 30vh;
+            border: 1px solid black;
+            background-color: red;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="box">
+            1.
+        </div>
+    </div>
+
+    <script>
+        //setInterval():- this is a method which calls and executes a function/animation at specified time, mostly in milisecond
+        //syntax:-
+        //setInterval(functionName, milisecond);
+
+        //clearIneterval() is used to stop the setinterval after sppecified time
+        let a = 0;
+        var x = setInterval(function myfun() {
+            a = a + 10;
+            // console.log(a);
+            if (a == 200) {
+                clearInterval(x);
+            }
+            else {
+                let target = document.getElementById('box');
+                target.style.marginLeft = a + 'px';
+            }
+
+        }, 100)
+
+        //you can animate anything
+
+    </script>
+</body>
+
+</html>

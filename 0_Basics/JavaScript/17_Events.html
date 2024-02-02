@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            width: 9rem;
+            height: 3rem;
+            font-size: 1.7rem;
+            color:white;
+            background-color: red;
+            border-radius: 10px;
+           
+        }
+        h1{
+            text-align: center;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+        }
+        #btn:hover{
+            cursor: pointer;
+            background-color: rgb(219, 216, 216);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Heading</h1>
+    <p id="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam perferendis expedita officiis veritatis quaerat necessitatibus modi sint odio reiciendis ut! Labore ipsa voluptatum, cumque magni laudantium fugiat eos, aut doloremque, ducimus excepturi nulla minima explicabo. Laborum in at quidem iure porro laudantium accusantium blanditiis ipsum quae expedita quos, officia, quibusdam incidunt, alias ducimus? Facilis, velit animi. Eveniet odio suscipit, dolorem alias enim rem perferendis. Sit aliquam corrupti quod consequuntur debitis consequatur, dolorum illo magnam quis ipsa quae maxime facere laborum dolores iste reprehenderit exercitationem voluptate fuga optio commodi animi inventore. Aliquam ducimus corporis obcaecati doloribus natus? Suscipit eos delectus vero?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente cum est et, in quia tempora placeat expedita. Fugiat possimus recusandae et, veritatis at earum deserunt voluptatibus non omnis delectus hic reprehenderit! Ut, sit voluptatum laborum pariatur dolorum veritatis distinctio nulla similique, nihil sequi quis dolore rerum eaque iure incidunt ea consequuntur qui nesciunt, error vero ullam omnis consequatur. Maiores laborum aut facere incidunt ad quod hic accusantium ea, consequuntur reiciendis facilis quisquam tempora molestias quas nam quis optio officiis sit nemo? Velit quos iusto perspiciatis saepe fugit odit veniam laudantium, nihil vel? Laboriosam vel rem quam? Voluptatibus sapiente ipsum eligendi sit molestiae deleniti, sint illum nisi iure laborum rerum delectus, numquam expedita vel impedit ad? Dolor tempora illum suscipit consectetur perspiciatis esse temporibus neque. Soluta doloremque libero quos recusandae asperiores corrupti dicta dolores incidunt atque debitis aut sunt in repudiandae amet quisquam quibusdam, vitae neque. Accusamus dolorum cupiditate nihil voluptas inventore quibusdam quia. Unde veniam soluta voluptatibus harum. Itaque, ducimus voluptates, nesciunt dolores quo eius quisquam obcaecati quos architecto alias exercitationem laborum possimus aperiam nemo voluptas labore optio beatae corporis? Excepturi eius velit itaque atque, odit tempora dolores facere vero nesciunt quod minima at ullam quaerat praesentium ad enim reiciendis.</p>
+    <div>
+        <button id="btn" onclick="myfun()">Submit</button>
+    </div>
+
+
+
+    <script>
+        console.log('THis is tutorial about Events');
+        //Events are actions that happen in the webpage like clicking a button or submit the form. 
+        document.querySelector('h1').onclick = function abc(){
+            this.style.color = "red";     
+        };
+       
+        function myfun(){
+            let x = document.getElementById("btn");
+            let y = document.getElementById("para");
+            if (y.style.display != "none") {
+                y.style.display = "none";
+            }
+            else{
+                y.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

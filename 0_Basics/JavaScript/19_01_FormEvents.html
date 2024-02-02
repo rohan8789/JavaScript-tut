@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="backend.php">
+        <label for="fname">
+            <div>
+            Name: <input type="text" name="myname" id="fname" onfocus="myfocus(this)" onblur="myblur(this)" oninput="myinput(this)">
+        </div>
+        </label>
+        <br>
+        <label for="class">
+            <div>
+            class: <input type="text" name="myclass" id="class" onfocus="myfocus(this)"  onblur="myblur(this)">
+            </div>
+            <!-- thats why we use addEventListener -->
+        </label>
+        <br>
+        <label for="car">Option
+        <select name="opt" id="myid">
+            <div>
+            <option value="india" default>India</option>
+            <option value="bhutan">Bhutan</option>
+            <option value="Nepal">Nepal</option>
+        </div>
+        </select>
+    </label>
+    <br>
+    <br>
+    <div id="box1" style="border:1px solid red"></div>
+    </form>
+    <script>
+        console.log('Form Events Tutorial');
+        /*
+            some Events of forms:-
+            keydown, keyup, keypress discussed before
+            focus(), blur(), input, change to be discussed
+            some submit options are:-
+                select, submit, invalid
+        */
+       //focus 
+       function myfocus(x){
+          // document.getElementById('fname').style.backgroundColor = "grey";
+          x.style.backgroundColor = "hotpink";
+       }
+
+       //blur to get back to original color
+       function myblur(y){
+           y.style.backgroundColor = "";
+       }
+
+       //input function trigger
+       function myinput(z){
+           var p = z.value;
+           document.getElementById('box1').innerHTML = p;
+       }
+    </script>
+</body>
+</html>

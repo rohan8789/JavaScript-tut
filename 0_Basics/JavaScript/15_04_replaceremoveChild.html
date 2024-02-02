@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>grapes</li>
+        <li>Mango</li>
+    </ul>
+    <script>
+        //DOM replace and remove method:-
+        //replaceChild() and removeChild().
+        let x = document.createElement('li');
+        let y = document.createTextNode('New Text');
+        x.appendChild(y);
+
+        console.log(x);
+
+        let target = document.querySelector('#list');
+        let old = target.children[2];
+        
+
+        //replace 
+        target.replaceChild(x, old);
+        console.log(old);
+
+        //removechild
+        let remove = target.children[4];
+        target.removeChild(remove);
+
+
+    </script>
+</body>
+</html>

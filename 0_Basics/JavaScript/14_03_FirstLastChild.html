@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            width: 70vw;
+            height: 40vh;
+            background-color: yellow;
+        }
+        
+        #inner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 80px;
+            width: 55vw;
+            height: 30vh;
+            background-color: hotpink;
+        }
+        .child{
+            width: 15vw;
+            height: 15vh;
+            margin-right: 10px;
+            margin-left: 10px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #head{
+            position: absolute;
+            left: 9.4%;
+            top: 7%;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <h2>Outer</h2>
+        <div id="inner">
+            <h2 id="head">Inner</h2>
+            <div class="child">A</div>
+            <div class="child">B</div>
+            <div class="child" id="child-c">C</div>
+            <div class="child">D</div>
+            <div class="child">E</div>
+        </div>
+    </div>
+    <script>
+        console.log('Hello');
+        let x = document.getElementById('inner').firstElementChild;
+        console.log(x);
+
+        document.getElementById('inner').firstElementChild.style.backgroundColor = "red";
+        document.getElementById('inner').firstElementChild.style.color = "white";
+
+        let y = document.getElementById('inner').lastElementChild;
+        console.log(y);
+
+        y.style.backgroundColor = "grey";
+
+
+        //FirstChild and lastChild
+        //it will take count text comment everything and will work same as firstElementChild/lastElementChild
+
+
+    </script>
+</body>
+</html>

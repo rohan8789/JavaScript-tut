@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = 'Name', x2 = 'Name2', x3 = 'Name3';
+        localStorage.setItem(x, 'Rohan Singh');
+        localStorage.setItem(x2, 'Harry');
+        localStorage.setItem(x3, 'Sahil');
+        let mydata = localStorage.getItem(x);
+        let mydata2 = localStorage.getItem(x2);
+        let mydata3 = localStorage.getItem(x3);
+
+
+        // console.log(mydata);
+        // console.log(mydata2);
+        // console.log(mydata3);
+
+        localStorage.clear();
+
+        //storing complex data like array and objects
+        //JSON.stringify and JSON.parse
+        //array
+        let item = 'veges';
+        let itemList = ['onion', 'potato', 'Mango'];
+        localStorage.setItem(item, JSON.stringify(itemList));
+        let data = JSON.parse(localStorage.getItem(item));
+        console.log(data);
+
+        //Objects
+        let emp = {
+            Name:'Rohan Sing',
+            UID:'20BCS4835',
+            job:'Learner'
+        }
+        localStorage.setItem(emp.UID, JSON.stringify(emp));
+        let d = JSON.parse(localStorage.getItem(emp.UID));
+        console.log(d);
+
+        //Session Storage:- just replace local With session
+        
+    </script>
+</body>
+</html>

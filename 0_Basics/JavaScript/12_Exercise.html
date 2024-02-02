@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //you have to fetch all the links from a given page whichcontains this text
+        //website---xyz
+        //links which has javascript
+        let a = document.links;
+        let mytxt = 'Script';
+        Array.from(a).forEach(function(element){
+            if (String(element).includes(mytxt)) {
+                console.log(element);
+            }
+        });
+    </script>
+</body>
+</html>

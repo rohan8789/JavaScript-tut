@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test{
+            width: 70vw;
+            height: 50vh;
+            background-color: rgb(167, 167, 167);
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Append Method</h2>
+    <div id="test">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem consequuntur dolore neque voluptatem culpa
+            fugit porro, necessitatibus a, consequatur maxime accusamus itaque explicabo quos cum, corrupti numquam eos
+            qui perferendis! Voluptates tempore impedit corrupti vero atque voluptatem, rem quisquam aliquam officia
+            necessitatibus ipsum hic in quae sunt nemo, nulla magni?</p>
+        <h3>Here heading 2</h3>
+    </div>
+    <script>
+        //DOM append Method---->2
+        //appendChild and insertBefore
+        //appendChild is used to insert text into tag which we learnt before
+        let nya = document.createElement('h1');
+        console.log(nya);
+
+        let text1 = document.createTextNode('This is forceful creation of paragraph');
+        console.log(text1);
+        nya.appendChild(text1);
+
+        //let t = document.getElementById("test").appendChild(nya);
+
+        //We could have created nesting of div ul li and would have inserted it.
+        //appendChild will be inserted at the end of any element.
+
+
+        //To insert it at desired place we would have used index value or
+        //we will use INSERTBEFORE
+
+        //insertBefore
+        let t = document.getElementById('test');
+        //console.log(target);
+        t.insertBefore(nya, t.childNodes[0]);
+
+    </script>
+</body>
+
+</html>

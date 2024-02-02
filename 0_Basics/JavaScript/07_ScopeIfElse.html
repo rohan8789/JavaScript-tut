@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scopes and conditionals.</title>
+</head>
+
+<body>
+
+    <div>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+            <li>item6</li>
+        </ul>
+    </div>
+
+    <script>
+        var string1 = "This is a string";
+        //console.log(string1);
+        var string2 = "This is a string1";
+        console.log(string2);
+        //here value gets updated, its a global scope, not behaving like programming in c/c++
+
+        //let vs var:- us let always, they are block var, dont get updated
+        /*var a = "u";
+        {
+           var a = "u6";
+           console.log(a)
+        }
+        console.log(a)
+        //will print u6 u6. lets see using let
+        */
+        let a = 'u';
+        {
+            let a = 'u4';
+            console.log(a);
+        }
+        console.log(a);
+
+        //Conditional If else
+        // == this checks equal to
+        //=== this checks data type and equals to
+        /*let age = 10;
+        if(age>18){
+            console.log('You can Vote');
+        }
+        else if(age == 10){
+            console.log('age is 10');
+        }
+        else{
+            console.log('You cant vote');
+        }
+        */
+
+        /*if(typeof vari === 'undefined'){
+            console.log('vari is not defined');
+        }
+        else{
+            console.log('vari is defiend');
+        }*/
+
+        /*doesDrive = true;
+        if (doesDreive) {
+            console.log('YOu can drive');
+        }
+        else{
+            console.log('YOu can not drive');
+        }*/
+
+        //conditional switch case
+        let cups = 10;
+        switch (cups) {
+            case 10:
+                console.log('Value is 10');
+                break;
+
+            case 41:
+                console.log('Value is 41');
+                break;
+
+            case 42:
+                console.log('Value is 42');
+                break;
+
+            case 43:
+                console.log('Value is 43');
+                break;
+
+            default:
+                console.log('value is neither 10, 41, 42, 43');
+                break;
+        }
+    </script>
+</body>
+
+</html>

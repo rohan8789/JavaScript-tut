@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = new Object;
+        person.name = "Rohan Singh";
+        person.Age = 21;
+        person.job = "Learner";
+
+        console.log(person);
+        //document.write(person.name);
+        for(keys in person){
+            document.write(`Value in ${keys} is ${person[keys]} <br>`);
+        }
+    </script>
+</body>
+</html>

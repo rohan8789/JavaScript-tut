@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="back()">Back</button>
+    <button onclick="forawrd()">Forward</button>
+    <button onclick="goboth()">Both</button>
+    <script>
+        //takes you to previous and forward browsed page
+        function back(){
+            history.back();
+        }
+        function forward(){
+            history.forward();
+        }
+
+        //we have one more method.
+        //Go():- goes back and forward both
+        //+ value for next page and - value for previous page
+        function goboth(){
+            history.go(-1);
+        }
+    </script>
+</body>
+</html>

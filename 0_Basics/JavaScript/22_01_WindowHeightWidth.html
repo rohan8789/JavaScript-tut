@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onresize="myresize()">
+    <script>
+        //inner/outerwidth
+        //inner/outerHeight
+        function myresize() {
+            let x = window.innerHeight;
+            console.log(x + 'innerHeight');
+
+            let y = window.outerHeight;
+            console.log(y + 'outer Height');
+
+            let m = window.innerWidth;
+            let n = window.outerWidth;
+            console.log(m + 'inner Width');
+            console.log(n + 'outer Width');
+        }
+
+    </script>
+</body>
+
+</html>

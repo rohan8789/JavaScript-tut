@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        #container{
+            width:70vw;
+            height:50vh;
+            border: 1px solid black;
+            background-color: rgb(194, 170, 182);
+            padding: 20px 10px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum sapiente recusandae vitae culpa. Assumenda, sapiente vel! Minus porro perferendis fugit maiores quae. In dolorem deserunt ab aut fugit odit? Et necessitatibus ut omnis fugit repellendus recusandae doloremque! Cum, reiciendis blanditiis consequuntur cupiditate minus molestiae doloremque animi ab qui, voluptas error atque vero? Impedit, earum minima id quasi aperiam et neque eveniet veritatis molestias itaque quo quisquam aliquid consequatur officiis, facilis velit laborum corrupti iste libero alias placeat saepquis minima, soluta eius dignissimos at inventore reprehenderit molestias esse nam, rerum ipsa. Debitis, praesentium nihil ipsa laborum rem possimus odio accusantium reiciendis consequatur mollitia deleniti culpa fugit libero ea, quas similique quos facere error ut ipsum amet. Deserunt, at.</p>
+    </div>
+    <script>
+        //DOM APPEND METHODS
+        //appendChild and insertBefore done before
+        // they just append element
+
+        //insertAdjeacentElement, insertAdjacentHTML, insertAdjacentText
+        //they can create and append together
+
+        //insertAdjacentElement:- Create and append tag.
+        //insertAdjacentHTML:- create and append TAG with text and add at specific position.
+        //insertAdjacentText:- create and append text only
+
+        //To add at specific position
+        //beforebegin, afterbegin, beforeend, afterend
+
+
+        
+        // 1. insertAdjacentElement 
+
+        let cElements = document.createElement('h2');
+        let nText = document.createTextNode('This is a h2');
+        let target = document.getElementById('container');
+
+        // document.querySelector('h2').style.margin = "auto";
+        cElements.appendChild(nText);
+        target.insertAdjacentElement('beforeend', cElements);     
+
+        //insertAdjacentHTML
+        //let t = document.getElementById('container');
+        let nElement = '<h1>This is my heading</h1>';
+
+        target.insertAdjacentHTML('afterbegin', nElement);
+
+        //similarily text node create kr skte hai.
+    </script>
+</body>
+</html>

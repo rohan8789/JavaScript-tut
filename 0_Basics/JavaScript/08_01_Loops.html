@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('This is Loops Tutorial');
+        //Reusability
+        //General types:- For, while, do-while
+        /*
+        let a = 31;
+        for(i = 0; i < 100; i++){
+            console.log(i);
+        }
+        */
+
+        /*
+        let j = 0
+        while(j<100){
+            console.log(j);
+            j++;
+        }
+        */
+        
+        /*
+        let k = 0;
+        do{
+           if (k===5) {
+               k++;
+               continue;
+            //    break;
+            }
+            console.log(k+1);
+            k++;
+        }while(k<10)
+        */
+
+        //forEach
+        /*
+        let arr = [12, 23, 27, 44, 74];
+        arr.forEach(function(element, index, array){
+            console.log(element, index, array);
+        });
+        */
+
+        let obj = {
+            name:'ROhan Singh',
+            age:21,
+            work:'Learner',
+            os:'Windows'
+        }
+
+        for(let key in obj){
+            console.log(`${key} of the object is ${obj[key]}`);
+        }
+
+    </script>
+</body>
+</html>

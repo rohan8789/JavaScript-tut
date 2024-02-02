@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>This is heading of editable div</h1>
+    </div>
+    <script>
+        console.log('Solve this Exercise');
+        /*
+            You have to create a div and inject into the page which contains heading h1.
+            Whenever someone clicks on the div it should convet itself
+            into editable place. 
+            whenever user clicks away (blur). save the note into local storage
+        */
+       let x = '<div contenteditable = "true">This is a editable Div</div>';
+       let y = document.getElementById('container');
+
+       y.insertAdjacentHTML('beforeend', x);
+       document.getElementById('container').innerHTML;
+
+       let m = localStorage.setItem()
+    </script>
+</body>
+</html>

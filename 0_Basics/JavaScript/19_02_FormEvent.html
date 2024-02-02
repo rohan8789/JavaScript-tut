@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="backend.php" onsubmit="mysubmit()">
+        <label for="fname">
+            <div>
+            Name: <input type="text" name="myname" id="fname" onfocus="myfocus(this)" onblur="myblur(this)" oninput="myinput(this)" onchange="mychange(this)">
+        </div>
+        </label>
+        <br>
+        <label for="class">
+            <div>
+            class: <input type="text" name="myclass" id="class" onfocus="myfocus(this)"  onblur="myblur(this)" onchange="mychange(this)">
+            </div>
+            <!-- thats why we use addEventListener -->
+        </label>
+        <br>
+        <label for="car">Option
+        <select name="opt" id="myid" onchange="mychange(this)">
+            <div>
+            <option value="india" default>India</option>
+            <option value="bhutan">Bhutan</option>
+            <option value="Nepal">Nepal</option>
+        </div>
+        </select>
+    </label>
+    <input type="submit">
+    <br>
+    <br>
+    <div id="box1" style="border:1px solid red"></div>
+    </form>
+    <script>
+        console.log('Form Events part 2');
+        //let see change select invalid
+        //1. change
+        function mychange(x){
+            let y = x.value;
+            document.getElementById('box1').innerHTML = y; 
+        }
+
+        //2. Submit
+        function mysubmit(){
+            let x = document.getElementById('fname').value;
+            alert("hello "+ x+ ' You submitted a form')
+        }
+
+        //onInvalid:- gives a message on wrong or no input.
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+        }
+        ul{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="list1">
+            <li>Apple</li>
+            <li>banana</li>
+            <li class="">Guava</li>
+            <li>Grapes</li>
+        </ul>
+        <ul id="list2">
+            <li>banana</li>
+            <li>Guava</li>
+            <li>pineApple</li>
+        </ul>
+    </div>
+    <script>
+        //isEqualNode() method:-
+        //it is a comparison node method. it returns true or false
+        //compare to same elements nodes
+        //criteria to compare
+        //same nodeType, same nodeName, same nodeValue, samechildNodes, same Attribute, same attributeValues
+
+        /*
+        //condition-1
+        let target1 = document.getElementById('list1').children[2];
+        let target2 = document.getElementById('list2').children[1];
+        let eq = target1.isEqualNode(target2);
+        */
+
+        //condition-2
+        let target1 = document.getElementById('list1').children[2];
+        let target2 = document.getElementById('list2').children[1];
+        let eq = target1.isEqualNode(target2);
+
+        console.log(eq);
+
+        //similarily we can check other options
+    </script>
+</body>
+</html>

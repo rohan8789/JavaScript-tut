@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let employee = {
+            name:"Rohan Singh",
+            age:21,
+            email:"rohansinghrp180@gmail.com",
+            fmovies:['krish', '96', 'sholay'],
+            salary : function(){
+                return 50000;
+            },
+
+            living:{
+                country :'India',
+                city:'Patna'
+            },
+            data : function(){
+                return this.name +" "+ this.email;
+            }
+        }
+        console.log(employee.email);
+        document.write(employee.name+ '<br>');
+        document.write(employee.fmovies);
+        document.write(employee.salary()+'<br>');
+        document.write(employee.living.city+'<br>');
+        document.write(employee.data()); //without this keyword it will thrpw an error.
+        console.log(`${data()}`);
+        console.log(employee);
+    </script>
+</body>
+</html>

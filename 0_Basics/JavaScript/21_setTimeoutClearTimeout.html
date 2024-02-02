@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: auto;
+        }
+
+        #box {
+            width: 15vw;
+            height: 30vh;
+            border: 1px solid black;
+            background-color: red;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box">
+            1.
+        </div>
+    </div>
+    <button onclick="stopanim()">button</button>
+    <script>
+        console.log('setTimeout and clearTimeout');
+        // syntax
+        //setTimeout(functionName, milisecond);
+        //runs only once and if you want to stop function before specified time, you can use clearTimeout().
+
+        let x = setTimeout(function myfun(){
+            // console.log('Hello');
+            var target = document.getElementById('box');
+            target.style.width = "5000px";
+
+        }, 5000)
+
+        function stopanim(){
+            clearTimeout(x);
+        }
+
+    </script>
+</body>
+</html>
